@@ -35,3 +35,21 @@ function by_three(number) {
   }
 }
 console.log(by_three(6));
+
+//functions extra
+let costsPerHour;
+function padelCourtcost(hour, courtType) {
+  if (courtType === "indoors") {
+    costsPerHour = 30;
+  } else if (courtType === "outdoors") {
+    costsPerHour = 20;
+  } else {
+    console.log("Invalid");
+  }
+  let padelCourtCost = costsPerHour * hour;
+  if (hour >= 3) {
+    padelCourtCost = padelCourtCost * 0.8;
+  }
+  return padelCourtCost;
+}
+console.log(padelCourtcost(7, "indoors"));
